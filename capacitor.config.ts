@@ -2,7 +2,7 @@ import { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
   appId: 'com.suhinin.app',
-  appName: 'bluecheck',
+  appName: 'InnoTreker',
   webDir: 'dist/spa',
   bundledWebRuntime: false
 };

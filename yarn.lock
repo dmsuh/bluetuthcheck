@@ -871,6 +871,11 @@ caniuse-lite@^1.0.30001449, caniuse-lite@^1.0.30001464:
   resolved "https://registry.npmjs.org/caniuse-lite/-/caniuse-lite-1.0.30001469.tgz"
   integrity sha512-Rcp7221ScNqQPP3W+lVOYDyjdR6dC+neEQCttoNr5bAyz54AboB4iwpnWgyi8P4YUsPybVzT4LgWiBbI3drL4g==
 
+capacitor-plugin-safe-area@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/capacitor-plugin-safe-area/-/capacitor-plugin-safe-area-1.0.1.tgz#92ff48d7fbc46e5f632a2d0c06686fec1ab16c1f"
+  integrity sha512-VELYRWNguGwt6hgzEKSQskk24x87VhiwlCxq839s2XS5vgMwEXdDguNaUoG9aVO8Ayu9nEn6snZ3J+bVjs2B4A==
+
 chalk@^4.0.0, chalk@^4.0.2, chalk@^4.1.0, chalk@^4.1.1:
   version "4.1.2"
   resolved "https://registry.npmjs.org/chalk/-/chalk-4.1.2.tgz"

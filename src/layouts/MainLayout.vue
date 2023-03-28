@@ -1,20 +1,14 @@
 <template>
-  <q-layout view="lHh Lpr lFf">
+  <q-layout class="body" view="lHh Lpr lFf">
     <q-header elevated>
-      <q-toolbar>
-        <q-btn
-          flat
-          dense
-          round
-          icon="menu"
-          aria-label="Menu"
-        />
-
-        <q-toolbar-title>
-          Проверка соединений и работы сервисов
-        </q-toolbar-title>
-
-        <div>Quasar v{{ $q.version }}</div>
+      <q-toolbar
+        class="flex-center"
+      >
+          <q-toolbar-title
+            shrink
+          >
+            InnoTreker
+          </q-toolbar-title>
       </q-toolbar>
     </q-header>
     <q-page-container>
@@ -24,48 +18,12 @@
 </template>
 
 <script setup lang="ts">
-const linksList = [
-  {
-    title: 'Docs',
-    caption: 'quasar.dev',
-    icon: 'school',
-    link: 'https://quasar.dev'
-  },
-  {
-    title: 'Github',
-    caption: 'github.com/quasarframework',
-    icon: 'code',
-    link: 'https://github.com/quasarframework'
-  },
-  {
-    title: 'Discord Chat Channel',
-    caption: 'chat.quasar.dev',
-    icon: 'chat',
-    link: 'https://chat.quasar.dev'
-  },
-  {
-    title: 'Forum',
-    caption: 'forum.quasar.dev',
-    icon: 'record_voice_over',
-    link: 'https://forum.quasar.dev'
-  },
-  {
-    title: 'Twitter',
-    caption: '@quasarframework',
-    icon: 'rss_feed',
-    link: 'https://twitter.quasar.dev'
-  },
-  {
-    title: 'Facebook',
-    caption: '@QuasarFramework',
-    icon: 'public',
-    link: 'https://facebook.quasar.dev'
-  },
-  {
-    title: 'Quasar Awesome',
-    caption: 'Community Quasar projects',
-    icon: 'favorite',
-    link: 'https://awesome.quasar.dev'
-  }
-]
+import { SafeArea } from 'capacitor-plugin-safe-area';
+const check = SafeArea.getSafeAreaInsets().then(({ insets }) => {
+  console.log(insets);
+});
+
+SafeArea.getStatusBarHeight().then(({statusBarHeight}) => {
+  console.log(statusBarHeight, 'statusbarHeight');
+})
 </script>

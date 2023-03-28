@@ -11,8 +11,13 @@
           size="lg"
           class="q-ma-md"
         />
+        <q-btn
+          label="Личный кабинет"
+          class="q-ma-md"
+          :disable="true"
+        />
+        <q-space/>
         Bluetooth {{ ble_enabled ? 'Включен' : 'Выключен' }}
-
         <q-btn
           :label="scanning ? 'Поиск...' : 'Начать поиск'"
           color="primary"
@@ -39,7 +44,7 @@
         <span
           v-else-if="!scanning && tried_scanning"
           class="q-ma-lg text-subtitle1"
-        >No devices found. Try again later!</span
+        >Устройств не найдено</span
         >
       </div>
       <q-btn
@@ -50,8 +55,6 @@
         @click="see_all = !see_all"
       />
     </div>
-
-
   </q-page>
 </template>
 
@@ -62,7 +65,7 @@ import {
   ScanResult
 } from '@capacitor-community/bluetooth-le'
 import {computed, ComputedRef, onMounted, ref} from 'vue';
-import ResultList from "components/ResultList.vue";
+import ResultList from 'components/ResultList.vue';
 
 const results = ref<ScanResult[]>([])
 const scanning = ref(false)
